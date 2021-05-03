@@ -18,25 +18,29 @@ From the photos below we can see that our stocks took a hit in 2018. 10 of our 1
 We observed this result in 2 ways – through our original macro and through our refactored macro. Below we will see the differences between the 2 macros and their effect on the length of time needed to perform the task.
 The data sheet in question consisted of 3013 rows of data for both 2017 and 2018. For our analysis we wanted to satisfy 3 things: firstly, to display the total daily volume for the respective ticker for the year in question, secondly to display the annual return for the ticker in question, and lastly to display the ticker in question.
 Therefore, the we formatted the original macro in the following steps:
-1.	work through the rows to determine the total daily volume for the respective ticker
-Then
-2.	work through all of the rows to obtain the starting price for the respective ticker 
-Then
+1.	work through the rows to determine the total daily volume for the respective ticker, then
+2.	work through all of the rows to obtain the starting price for the respective ticker, then
 3.	work through all of the rows to obtain the closing price for the respective ticker
+
 This method yielded the following times:
 
 <p align="center">
 <img src=https://github.com/smanowar/stock-analysis/blob/ba42d00d4ae2fac90e6c8716c6fd998c08cac5e5/visuals/All%20stocks%20analysis%202017.PNG> <img src=https://github.com/smanowar/stock-analysis/blob/ba42d00d4ae2fac90e6c8716c6fd998c08cac5e5/visuals/all%20stocks%20analysis%202018.PNG> 
 </p>
 
-As we can see we have a result of ___ and ___ respectively for the years 2017 and 2018 using our original macro.
+As we can see we have a result of 0.859 seconds and 0.843 respectively for the years 2017 and 2018 using our original macro.
+
 The intuition behind our refactored code is to work through the same pathway as our original code, however instead of looping through our rows multiple times to get values for our variables, we looped through the rows once to obtain values for each of the tickerVolume, tickerStartingPrice and tickerEndingPrice, indexing them as a function of a new variable – tickerIndex. Our tickerIndex variable has a range of only 0 to 11 (one value for each stock in our analysis) versus the range in our original macro being all the rows.
-(insert pic)
 
 This allowed us to reduce our calculation time by a relatively large amount as seen below:
-(insert pic)
 
-Using our refactored macro saved us ___ seconds in our 2017 analysis and __ seconds in our 2018 analysis.
+<p align="center">
+<img src=https://github.com/smanowar/stock-analysis/blob/1a9f585b7b4f40de6186ea72d2ae3bc1fe064938/Resources/VBA_Challenge_2017.PNG> <img src=https://github.com/smanowar/stock-analysis/blob/1a9f585b7b4f40de6186ea72d2ae3bc1fe064938/Resources/VBA_Challenge_2018.PNG> 
+</p>
+
+Yeilding times of 0.172 seconds in 2017 and 0.203 seconds in 2018.
+
+Using our refactored macro saved us 0.687 seconds in our 2017 analysis and 0.64 seconds in our 2018 analysis.
 
 ## Summary
 
