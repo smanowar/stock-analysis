@@ -4,8 +4,8 @@
 
 ### Purpose
 
-The primary purpose of this analysis is to observe the annual volume traded and the annual return of 12 different stocks, comparing their outcomes between 2017 and 2018.
-This was accomplished using 2 macros on VBA – the original macro and a macro which was refactored. Below we will compare and contrast the ability of the 2 different macros to analyze our data.
+The primary purpose of this analysis is to observe the volume traded annually and the annual return of 12 different stocks, comparing their outcomes between 2017 and 2018.
+This was accomplished using two macros on VBA – the original macro and a refactored version of the original macro. Below we will compare and contrast the efficiencies of the 2 different macros to analyze our data.
 
 ## Analysis and Results
 
